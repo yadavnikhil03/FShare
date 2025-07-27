@@ -1,0 +1,3 @@
+2025-07-27 10:11:28,374 - root - INFO - Logging initialized with Unicode support - Log file: D:\Applications\Fshare\Fshare\logs\transfer.log
+2025-07-27 10:11:36,975 - frontend.ui_main - INFO - Stopped connected devices monitoring
+2025-07-27 10:11:36,976 - frontend.ui_main - INFO - Application closing - all services stopped

@@ -1,0 +1,483 @@
+/* Dark Theme for Fshare Application */
+
+QMainWindow {
+    background-color: #2b2b2b;
+    color: #ffffff;
+}
+
+QWidget {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+}
+
+/* Tab Widget */
+QTabWidget::pane {
+    border: 1px solid #3c3c3c;
+    background-color: #353535;
+}
+
+QTabWidget::tab-bar {
+    alignment: center;
+}
+
+QTabBar::tab {
+    background-color: #404040;
+    color: #ffffff;
+    padding: 8px 16px;
+    margin-right: 2px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+QTabBar::tab:selected {
+    background-color: #0078d4;
+}
+
+QTabBar::tab:hover {
+    background-color: #4a4a4a;
+}
+
+/* Group Boxes */
+QGroupBox {
+    font-weight: bold;
+    border: 2px solid #3c3c3c;
+    border-radius: 5px;
+    margin-top: 1ex;
+    padding-top: 10px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 5px 0 5px;
+}
+
+/* Buttons */
+QPushButton {
+    background-color: #0078d4;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10pt;
+    border-radius: 4px;
+    min-width: 80px;
+}
+
+QPushButton:hover {
+    background-color: #106ebe;
+}
+
+QPushButton:pressed {
+    background-color: #005a9e;
+}
+
+QPushButton:disabled {
+    background-color: #4a4a4a;
+    color: #808080;
+}
+
+/* Input Fields */
+QLineEdit {
+    border: 2px solid #3c3c3c;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: #404040;
+    color: #ffffff;
+}
+
+QLineEdit:focus {
+    border-color: #0078d4;
+}
+
+/* Combo Box */
+QComboBox {
+    border: 2px solid #3c3c3c;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: #404040;
+    color: #ffffff;
+    min-width: 6em;
+}
+
+QComboBox:hover {
+    border-color: #0078d4;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+    border-left-width: 1px;
+    border-left-color: #3c3c3c;
+    border-left-style: solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+    image: none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #ffffff;
+}
+
+QComboBox QAbstractItemView {
+    border: 2px solid #3c3c3c;
+    background-color: #404040;
+    color: #ffffff;
+    selection-background-color: #0078d4;
+}
+
+/* List Widget */
+QListWidget {
+    border: 2px solid #3c3c3c;
+    border-radius: 4px;
+    background-color: #404040;
+    color: #ffffff;
+    alternate-background-color: #454545;
+}
+
+QListWidget::item {
+    padding: 5px;
+    border-bottom: 1px solid #3c3c3c;
+}
+
+QListWidget::item:selected {
+    background-color: #0078d4;
+}
+
+QListWidget::item:hover {
+    background-color: #4a4a4a;
+}
+
+/* Progress Bar */
+QProgressBar {
+    border: 2px solid #3c3c3c;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #404040;
+    color: #ffffff;
+}
+
+QProgressBar::chunk {
+    background-color: #0078d4;
+    border-radius: 3px;
+}
+
+/* Text Edit */
+QTextEdit {
+    border: 2px solid #3c3c3c;
+    border-radius: 4px;
+    background-color: #404040;
+    color: #ffffff;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 9pt;
+}
+
+/* Labels */
+QLabel {
+    color: #ffffff;
+}
+
+/* Status Bar */
+QStatusBar {
+    background-color: #353535;
+    color: #ffffff;
+    border-top: 1px solid #3c3c3c;
+}
+
+/* Scrollbars */
+QScrollBar:vertical {
+    background-color: #404040;
+    width: 15px;
+    border-radius: 7px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #606060;
+    border-radius: 7px;
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: #0078d4;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar:horizontal {
+    background-color: #404040;
+    height: 15px;
+    border-radius: 7px;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: #606060;
+    border-radius: 7px;
+    min-width: 20px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background-color: #0078d4;
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+/* Checkable buttons (like toggle buttons) */
+QPushButton:checked {
+    background-color: #28a745;
+}
+
+QPushButton:checked:hover {
+    background-color: #218838;
+}
+
+/* Connection Sections */
+QGroupBox#connectionLinkSection,
+QGroupBox#connectionCodeSection,
+QGroupBox#deviceDiscoverySection,
+QGroupBox#fileSelectionGroup,
+QGroupBox#transferGroup {
+    font-weight: bold;
+    border: 2px solid #0078d4;
+    border-radius: 8px;
+    margin-top: 1ex;
+    padding-top: 15px;
+    background-color: #333333;
+}
+
+QGroupBox#connectionLinkSection::title,
+QGroupBox#connectionCodeSection::title,
+QGroupBox#deviceDiscoverySection::title,
+QGroupBox#fileSelectionGroup::title,
+QGroupBox#transferGroup::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 8px 0 8px;
+    color: #0078d4;
+    font-size: 11pt;
+    font-weight: bold;
+}
+
+/* File Selection Widgets */
+QListWidget#fileListWidget {
+    border: 2px solid #555555;
+    border-radius: 6px;
+    background-color: #454545;
+    color: #ffffff;
+    font-size: 10pt;
+    alternate-background-color: #404040;
+}
+
+QListWidget#fileListWidget::item {
+    padding: 8px;
+    border-bottom: 1px solid #555555;
+}
+
+QListWidget#fileListWidget::item:selected {
+    background-color: #0078d4;
+    color: #ffffff;
+}
+
+QListWidget#fileListWidget::item:hover {
+    background-color: #555555;
+}
+
+/* File Buttons */
+QPushButton#addFileButton,
+QPushButton#removeFileButton {
+    background-color: #28a745;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 10pt;
+    padding: 8px;
+}
+
+QPushButton#addFileButton:hover,
+QPushButton#removeFileButton:hover {
+    background-color: #218838;
+}
+
+QPushButton#removeFileButton {
+    background-color: #dc3545;
+}
+
+QPushButton#removeFileButton:hover {
+    background-color: #c82333;
+}
+
+/* Transfer Progress */
+QProgressBar#transferProgress {
+    border: 2px solid #555555;
+    border-radius: 6px;
+    text-align: center;
+    background-color: #404040;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+QProgressBar#transferProgress::chunk {
+    background-color: #28a745;
+    border-radius: 4px;
+}
+
+/* Send Button */
+QPushButton#sendButton {
+    background-color: #ff6b35;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 12pt;
+    padding: 12px;
+}
+
+QPushButton#sendButton:hover {
+    background-color: #e55a2b;
+}
+
+QPushButton#sendButton:pressed {
+    background-color: #cc4e24;
+}
+
+QPushButton#sendButton:disabled {
+    background-color: #555555;
+    color: #888888;
+}
+
+/* Progress Label */
+QLabel#progressLabel {
+    color: #cccccc;
+    font-weight: bold;
+    font-size: 10pt;
+}
+
+/* Connection Input Fields */
+QLineEdit#connectionLinkInput,
+QLineEdit#connectionCodeInput {
+    border: 2px solid #555555;
+    border-radius: 6px;
+    padding: 8px 12px;
+    background-color: #454545;
+    color: #ffffff;
+    font-size: 11pt;
+    font-family: 'Consolas', 'Courier New', monospace;
+}
+
+QLineEdit#connectionLinkInput:focus,
+QLineEdit#connectionCodeInput:focus {
+    border-color: #0078d4;
+    background-color: #404040;
+}
+
+QLineEdit#connectionCodeInput {
+    text-align: center;
+    font-size: 14pt;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Connection Labels */
+QLabel#connectionLabel,
+QLabel#deviceLabel {
+    color: #cccccc;
+    font-weight: bold;
+    font-size: 10pt;
+    margin-bottom: 5px;
+}
+
+/* Device ComboBox */
+QComboBox#deviceComboBox {
+    border: 2px solid #555555;
+    border-radius: 6px;
+    padding: 8px 12px;
+    background-color: #454545;
+    color: #ffffff;
+    font-size: 11pt;
+}
+
+QComboBox#deviceComboBox:focus {
+    border-color: #0078d4;
+    background-color: #404040;
+}
+
+QComboBox#deviceComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-left-width: 1px;
+    border-left-color: #555555;
+    border-left-style: solid;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: #606060;
+}
+
+QComboBox#deviceComboBox::down-arrow {
+    image: none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #ffffff;
+}
+
+/* Connection Buttons */
+QPushButton#connectLinkButton,
+QPushButton#connectCodeButton,
+QPushButton#refreshButton {
+    background-color: #0078d4;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 11pt;
+    padding: 10px;
+}
+
+QPushButton#connectLinkButton:hover,
+QPushButton#connectCodeButton:hover,
+QPushButton#refreshButton:hover {
+    background-color: #106ebe;
+}
+
+QPushButton#connectLinkButton:pressed,
+QPushButton#connectCodeButton:pressed,
+QPushButton#refreshButton:pressed {
+    background-color: #005a9e;
+}
+
+QPushButton#connectLinkButton:disabled,
+QPushButton#connectCodeButton:disabled,
+QPushButton#refreshButton:disabled {
+    background-color: #555555;
+    color: #888888;
+}
+
+/* Discovery Status */
+QLabel#discoveryStatus {
+    color: #888888;
+    font-style: italic;
+    font-size: 10pt;
+    padding: 5px;
+}
+
+/* Separator Label */
+QLabel#separatorLabel {
+    color: #888888;
+    font-weight: bold;
+    font-size: 12pt;
+    background-color: #2b2b2b;
+    padding: 5px 15px;
+}
