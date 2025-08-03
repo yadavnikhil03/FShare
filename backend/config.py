@@ -43,7 +43,15 @@ class Config:
         self.BROADCAST_INTERVAL = 5  # seconds
         self.DEVICE_TIMEOUT = 30  # seconds
         
-        # Load configuration from file if provided
+                # Ensure required directories exist
+        self.ensure_directories()
+        
+        # Validate configuration
+        errors = self.validate()
+        if errors:
+            print(f"Configuration validation errors: {errors}")
+        
+        # Load config file if provided
         if config_file and os.path.exists(config_file):
             self.load_config(config_file)
     

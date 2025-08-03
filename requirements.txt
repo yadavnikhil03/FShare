@@ -2,12 +2,6 @@ pyqt5
 cryptography
 tqdm
 requests
-socket
-hashlib
-json
-threading
-logging
-datetime
 fastapi
 uvicorn
 qrcode[pil]

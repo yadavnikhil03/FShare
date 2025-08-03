@@ -19,12 +19,13 @@ from .utils import verify_file_integrity, format_file_size, ensure_unique_filena
 class FileReceiver:
     """Handles receiving files from other devices"""
     
-    def __init__(self, config=None):
+    def __init__(self, config=None, download_path=None):
         """
         Initialize file receiver
         
         Args:
             config: Configuration object
+            download_path: Override default download path
         """
         self.config = config or get_config()
         self.logger = logging.getLogger(__name__)
@@ -35,7 +36,10 @@ class FileReceiver:
         # Server settings
         self.host = '0.0.0.0'  # Listen on all interfaces
         self.port = self.config.RECEIVER_PORT
-        self.download_path = self.config.DEFAULT_DOWNLOAD_DIR
+        self.download_path = download_path or self.config.DEFAULT_DOWNLOAD_DIR
+        
+        # Ensure download directory exists
+        os.makedirs(self.download_path, exist_ok=True)
         
         # Server state
         self.running = False
@@ -559,6 +563,11 @@ class FileReceiver:
             'ip': get_local_ip(),
             'port': self.port
         }
+    
+    def generate_connection_code(self):
+        """Generate new connection code"""
+        self.connection_code = ''.join(secrets.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789') for _ in range(6))
+        return self.connection_code
     
     def regenerate_connection_code(self):
         """Regenerate connection code and link"""
