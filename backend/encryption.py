@@ -13,6 +13,33 @@ from cryptography.hazmat.backends import default_backend
 import secrets
 
 
+class EncryptionManager:
+    """Wrapper class for encryption operations - used by tests"""
+    
+    def __init__(self):
+        self.file_encryption = FileEncryption()
+    
+    def generate_key(self):
+        """Generate encryption key"""
+        return self.file_encryption.generate_key()
+    
+    def encrypt_data(self, data, key):
+        """Encrypt data"""
+        return self.file_encryption.encrypt_data(data, key)
+    
+    def decrypt_data(self, encrypted_data, key):
+        """Decrypt data"""
+        return self.file_encryption.decrypt_data(encrypted_data, key)
+    
+    def encrypt_file(self, input_file, output_file, key):
+        """Encrypt file"""
+        return self.file_encryption.encrypt_file(input_file, output_file, key)
+    
+    def decrypt_file(self, input_file, output_file, key):
+        """Decrypt file"""
+        return self.file_encryption.decrypt_file(input_file, output_file, key)
+
+
 class FileEncryption:
     """Handles file encryption and decryption operations"""
     
